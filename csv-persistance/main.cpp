@@ -13,9 +13,15 @@
 //
 
 #include <iostream>
+#include "L1/FileSystem.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, CSV Persister!\n";
+    FileSystem fs;
+    std::string path = "/var/db-persister/data/test.txt";
+    
+    fs.append(path, "THis is the new hit");
+    
+    std::ifstream streamcheto = fs.read(path);
+    
     return 0;
 }
