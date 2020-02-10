@@ -13,15 +13,16 @@
 #include <string>
 
 class Persistance {
-    public:
-        Persistance();
-    protected:
-        std::ofstream outputFileStream;
+public:
+    Persistance();
+protected:
+    std::ofstream outputFileStream;
 
     virtual void append(std::string path, std::string text) = 0;
     virtual void replace(std::string path, std::string text) = 0;
     virtual bool erase(std::string path) = 0;
     virtual std::ifstream read(std::string path) = 0;
+    virtual bool exist(std::string path) = 0;
 };
 
 #endif /* Persistance_hpp */

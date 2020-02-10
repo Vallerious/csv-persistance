@@ -8,6 +8,8 @@
 
 #include "FileSystem.hpp"
 #include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 
 FileSystem::FileSystem() {}
 
@@ -32,4 +34,14 @@ std::ifstream FileSystem::read(std::string filePath) {
     inputStr.open(filePath);
     
     return inputStr;
+}
+
+bool FileSystem::exist(std::string filePath) {
+    struct stat info;
+    
+    return stat(filePath.c_str(), &info) == 0;
+}
+
+bool FileSystem::createDir(std::string dirPath) {
+    return mkdir(dirPath.c_str(), S_IRWXU);
 }

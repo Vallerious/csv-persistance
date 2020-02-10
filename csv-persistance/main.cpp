@@ -13,15 +13,19 @@
 //
 
 #include <iostream>
-#include "L1/FileSystem.hpp"
+#include "L2/CSVDriver.hpp"
 
 int main(int argc, const char * argv[]) {
-    FileSystem fs;
-    std::string path = "/var/db-persister/data/test.txt";
+    CSVDriver csv;
     
-    fs.append(path, "THis is the new hit");
+    csv.createDB("valio");
+    csv.use("valio");
     
-    std::ifstream streamcheto = fs.read(path);
+    try {
+        csv.createTable("creatures", "id,type,health");
+    } catch (const char* err) {
+        std::cerr << err << std::endl;
+    }
     
     return 0;
 }

@@ -18,6 +18,8 @@ public:
     void replace(std::string filePath, std::string text);
     bool erase(std::string filePath);
     std::ifstream read(std::string filePath);
+    bool exist(std::string filePath);
+    bool createDir(std::string dirPath);
 };
 
 #endif /* FileSystem_hpp */
