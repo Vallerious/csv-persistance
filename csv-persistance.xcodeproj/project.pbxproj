@@ -37,6 +37,7 @@
 		99BE558823F1A1A60013D7F5 /* DBDriver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DBDriver.hpp; sourceTree = "<group>"; };
 		99BE558A23F1A7BF0013D7F5 /* CSVDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CSVDriver.cpp; sourceTree = "<group>"; };
 		99BE558B23F1A7BF0013D7F5 /* CSVDriver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CSVDriver.hpp; sourceTree = "<group>"; };
+		99BE558D23F1C1310013D7F5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,7 @@
 		9946CC4823EDACE300B01D7E = {
 			isa = PBXGroup;
 			children = (
+				99BE558D23F1C1310013D7F5 /* README.md */,
 				9946CC5323EDACE300B01D7E /* csv-persistance */,
 				9946CC5223EDACE300B01D7E /* Products */,
 			);
