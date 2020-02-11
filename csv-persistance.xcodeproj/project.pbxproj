@@ -12,6 +12,8 @@
 		99BE558423F168B80013D7F5 /* Persistance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99BE558223F168B80013D7F5 /* Persistance.cpp */; };
 		99BE558923F1A1A60013D7F5 /* DBDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99BE558723F1A1A60013D7F5 /* DBDriver.cpp */; };
 		99BE558C23F1A7BF0013D7F5 /* CSVDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99BE558A23F1A7BF0013D7F5 /* CSVDriver.cpp */; };
+		99BE559123F2B8200013D7F5 /* CommandParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99BE558F23F2B8200013D7F5 /* CommandParser.cpp */; };
+		99BE559423F2BA6E0013D7F5 /* BasicCommandParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99BE559223F2BA6E0013D7F5 /* BasicCommandParser.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +40,10 @@
 		99BE558A23F1A7BF0013D7F5 /* CSVDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CSVDriver.cpp; sourceTree = "<group>"; };
 		99BE558B23F1A7BF0013D7F5 /* CSVDriver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CSVDriver.hpp; sourceTree = "<group>"; };
 		99BE558D23F1C1310013D7F5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		99BE558F23F2B8200013D7F5 /* CommandParser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CommandParser.cpp; sourceTree = "<group>"; };
+		99BE559023F2B8200013D7F5 /* CommandParser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CommandParser.hpp; sourceTree = "<group>"; };
+		99BE559223F2BA6E0013D7F5 /* BasicCommandParser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BasicCommandParser.cpp; sourceTree = "<group>"; };
+		99BE559323F2BA6E0013D7F5 /* BasicCommandParser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BasicCommandParser.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,7 @@
 		9946CC5323EDACE300B01D7E /* csv-persistance */ = {
 			isa = PBXGroup;
 			children = (
+				99BE558E23F2B7F40013D7F5 /* utils */,
 				99BE558623F1A1350013D7F5 /* L2 */,
 				99BE558523F16A660013D7F5 /* L1 */,
 				9946CC5423EDACE300B01D7E /* main.cpp */,
@@ -98,6 +105,17 @@
 				99BE558B23F1A7BF0013D7F5 /* CSVDriver.hpp */,
 			);
 			path = L2;
+			sourceTree = "<group>";
+		};
+		99BE558E23F2B7F40013D7F5 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				99BE558F23F2B8200013D7F5 /* CommandParser.cpp */,
+				99BE559023F2B8200013D7F5 /* CommandParser.hpp */,
+				99BE559223F2BA6E0013D7F5 /* BasicCommandParser.cpp */,
+				99BE559323F2BA6E0013D7F5 /* BasicCommandParser.hpp */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,10 +175,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99BE559423F2BA6E0013D7F5 /* BasicCommandParser.cpp in Sources */,
 				99BE557E23F156D40013D7F5 /* FileSystem.cpp in Sources */,
 				99BE558423F168B80013D7F5 /* Persistance.cpp in Sources */,
 				99BE558C23F1A7BF0013D7F5 /* CSVDriver.cpp in Sources */,
 				9946CC5523EDACE300B01D7E /* main.cpp in Sources */,
+				99BE559123F2B8200013D7F5 /* CommandParser.cpp in Sources */,
 				99BE558923F1A1A60013D7F5 /* DBDriver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

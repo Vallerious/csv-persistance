@@ -15,6 +15,7 @@
 #include <iostream>
 #include <sstream>
 #include "L2/CSVDriver.hpp"
+#include "utils/BasicCommandParser.hpp"
 
 int main(int argc, const char * argv[]) {
     CSVDriver csv;
@@ -33,7 +34,12 @@ int main(int argc, const char * argv[]) {
 //            std::cout << temp << std::endl;
 //        }
 //        csv.insert("creatures", "3,bulgarin,1000");
-        csv.update("creatures", "3,hungarian,900");
+//        csv.update("creatures", "3,hungarian,900");
+        
+        // Testing the command parser.
+        BasicCommandParser bcp("create");
+        
+        std::cout << "command is: " << bcp.getCommand() << "; and arguments length is: " << bcp.getArguments().size() << std::endl;
     } catch (const char* err) {
         std::cerr << err << std::endl;
     }
