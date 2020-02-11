@@ -13,6 +13,7 @@
 //
 
 #include <iostream>
+#include <sstream>
 #include "L2/CSVDriver.hpp"
 
 int main(int argc, const char * argv[]) {
@@ -22,7 +23,17 @@ int main(int argc, const char * argv[]) {
     csv.use("valio");
     
     try {
-        csv.createTable("creatures", "id,type,health");
+//        csv.createTable("creatures", "id,type,health");
+//        csv.insert("creatures", "2,rimlqnin,200");
+//        csv.insert("creatures", "3,gruk,250");
+
+//        std::ifstream fileStream = csv.select("creatures");
+//        std::string temp;
+//        while (std::getline(fileStream, temp)) {
+//            std::cout << temp << std::endl;
+//        }
+//        csv.insert("creatures", "3,bulgarin,1000");
+        csv.update("creatures", "3,hungarian,900");
     } catch (const char* err) {
         std::cerr << err << std::endl;
     }

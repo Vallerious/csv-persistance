@@ -18,6 +18,10 @@ public:
     void createDB(std::string dbName);
     void createTable(std::string tableName, std::string initialData);
     void createTable(std::string tableName);
+    void insert(std::string tableName, std::string rowData);
+    std::ifstream select(std::string tableName);
+    void erase(std::string tableName, std::string recordId);
+    void update(std::string tableName, std::string rowData);
 };
 
 #endif /* CSVDriver_hpp */
